@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.1 (Python 3.11.0 on win32)" generated="20221121 22:52:20.014" rpa="false" schemaversion="3">
+<robot generator="Robot 6.0.1 (Python 3.11.0 on win32)" generated="20221121 23:16:49.354" rpa="false" schemaversion="3">
 <suite id="s1" name="Test ValidateLoginForm" source="C:\Users\_VOIS\Documents\GitHub\robot-framework-ui-api-testing\tests\Test_ValidateLoginForm.robot">
 <test id="s1-t1" name="Validate unsuccesffull login" line="6">
 <kw name="Open the browser with the target URL">
@@ -7,50 +7,50 @@
 <arg>Chrome</arg>
 <arg>resources/chromedriver.exe</arg>
 <doc>Creates an instance of Selenium WebDriver.</doc>
-<msg timestamp="20221121 22:52:20.202" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
-<status status="PASS" starttime="20221121 22:52:20.202" endtime="20221121 22:52:21.276"/>
+<msg timestamp="20221121 23:16:49.541" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20221121 23:16:49.541" endtime="20221121 23:16:50.616"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20221121 22:52:21.276" endtime="20221121 22:52:21.389"/>
+<status status="PASS" starttime="20221121 23:16:50.616" endtime="20221121 23:16:50.746"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>https://rahulshettyacademy.com/loginpagePractise/</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20221121 22:52:21.389" level="INFO">Opening url 'https://rahulshettyacademy.com/loginpagePractise/'</msg>
-<status status="PASS" starttime="20221121 22:52:21.389" endtime="20221121 22:52:22.135"/>
+<msg timestamp="20221121 23:16:50.746" level="INFO">Opening url 'https://rahulshettyacademy.com/loginpagePractise/'</msg>
+<status status="PASS" starttime="20221121 23:16:50.746" endtime="20221121 23:16:51.481"/>
 </kw>
-<status status="PASS" starttime="20221121 22:52:20.202" endtime="20221121 22:52:22.135"/>
+<status status="PASS" starttime="20221121 23:16:49.541" endtime="20221121 23:16:51.482"/>
 </kw>
 <kw name="Fill out the login form with the wrong credentials">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id:username</arg>
 <arg>WrongUserName</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221121 22:52:22.137" level="INFO">Typing text 'WrongUserName' into text field 'id:username'.</msg>
-<status status="PASS" starttime="20221121 22:52:22.137" endtime="20221121 22:52:22.230"/>
+<msg timestamp="20221121 23:16:51.483" level="INFO">Typing text 'WrongUserName' into text field 'id:username'.</msg>
+<status status="PASS" starttime="20221121 23:16:51.482" endtime="20221121 23:16:51.575"/>
 </kw>
 <kw name="Input Password" library="SeleniumLibrary">
 <arg>id:password</arg>
 <arg>WrongPassword</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20221121 22:52:22.230" level="INFO">Typing password into text field 'id:password'.</msg>
-<msg timestamp="20221121 22:52:22.261" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20221121 22:52:22.320" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20221121 22:52:22.230" endtime="20221121 22:52:22.320"/>
+<msg timestamp="20221121 23:16:51.575" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg timestamp="20221121 23:16:51.607" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20221121 23:16:51.661" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20221121 23:16:51.575" endtime="20221121 23:16:51.661"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>id:signInBtn</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20221121 22:52:22.321" level="INFO">Clicking button 'id:signInBtn'.</msg>
-<status status="PASS" starttime="20221121 22:52:22.320" endtime="20221121 22:52:22.379"/>
+<msg timestamp="20221121 23:16:51.661" level="INFO">Clicking button 'id:signInBtn'.</msg>
+<status status="PASS" starttime="20221121 23:16:51.661" endtime="20221121 23:16:51.710"/>
 </kw>
-<status status="PASS" starttime="20221121 22:52:22.135" endtime="20221121 22:52:22.380"/>
+<status status="PASS" starttime="20221121 23:16:51.482" endtime="20221121 23:16:51.710"/>
 </kw>
-<status status="PASS" starttime="20221121 22:52:20.202" endtime="20221121 22:52:22.380"/>
+<status status="PASS" starttime="20221121 23:16:49.541" endtime="20221121 23:16:51.711"/>
 </test>
 <doc>Validate the login form</doc>
-<status status="PASS" starttime="20221121 22:52:20.014" endtime="20221121 22:52:22.381"/>
+<status status="PASS" starttime="20221121 23:16:49.354" endtime="20221121 23:16:51.711"/>
 </suite>
 <statistics>
 <total>

@@ -1,8 +1,8 @@
 *** Settings ***
-Documentation           Validate the login form
-Library                 SeleniumLibrary
-Test Setup              Open the browser with the target URL
-Test Teardown           Close the browser
+Documentation                                       Validate the login form
+Library                                             SeleniumLibrary
+Test Setup                                          Open the browser with the target URL
+Test Teardown                                       Close the browser
 
 *** Variables ***
 ${UserName_Locator_ID}                              id:username

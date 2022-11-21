@@ -1,6 +1,8 @@
 *** Settings ***
-Documentation   Validate the login form
-Library     SeleniumLibrary
+Documentation           Validate the login form
+Library                 SeleniumLibrary
+Test Setup              Open the browser with the target URL
+Test Teardown           Close the browser
 
 *** Variables ***
 ${UserName_Locator_ID}                              id:username
@@ -21,26 +23,20 @@ ${Expected_Shop_Page_Header_Text}                   ProtoCommerce Home
 
 *** Test Cases ***
 1- Validate succesffull login with the valid credentials
-    Open the browser with the target URL
     Fill out the login form with the valid credentials
     Wait Until Page Contains ProtoCommerce Home
     Validate the user navigated to the shop page
     Validate shop page header
-    Close the browser
 
 2- Validate unsuccesffull login with the wrong credentials
-    Open the browser with the target URL
     Fill out the login form with the wrong credentials
     Validate the error message displayed
     Validate Incorrect error message content
-    Close the browser
 
 3- Validate unsuccesffull login with empty credentials
-    Open the browser with the target URL
     Fill out the login form with the empty credentials
     Validate the error message displayed
     Validate Empty error message content
-    Close the browser
 
 *** Keywords ***
 Open the browser with the target URL

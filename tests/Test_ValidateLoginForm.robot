@@ -33,19 +33,19 @@ Open the browser with the target URL
 Fill out the login form with the valid credentials
     Clear Element Text              id:username
     Clear Element Text              id:password
-    input text                      id:username     rahulshettyacademy
-    input password                  id:password     learning
-    click button                    id:signInBtn
+    Input Text                      id:username     rahulshettyacademy
+    Input Password                  id:password     learning
+    Click Button                    id:signInBtn
 
 Fill out the login form with the wrong credentials
     Clear Element Text              id:username
     Clear Element Text              id:password
-    input text                      id:username     WrongUserName
-    input password                  id:password     WrongPassword
-    click button                    id:signInBtn
+    Input Text                      id:username     WrongUserName
+    Input Password                  id:password     WrongPassword
+    Click Button                    id:signInBtn
 
 Fill out the login form with the empty credentials
-    click button                    id:signInBtn
+    Click Button                    id:signInBtn
 
 Validate the error message displayed
     Wait Until Element Is Visible   xpath://div[@class='alert alert-danger col-md-12']

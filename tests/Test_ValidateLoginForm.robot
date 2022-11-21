@@ -2,6 +2,23 @@
 Documentation   Validate the login form
 Library     SeleniumLibrary
 
+*** Variables ***
+${UserName_Locator_ID}                              id:username
+${Password_Locator_ID}                              id:password
+${SignIn_Button_Locator_ID}                         id:signInBtn
+${Shop_Page_Header_Locator_XPATH}                   xpath://button[@class='navbar-toggler']//preceding-sibling::a[@class='navbar-brand']
+${SignIn_Error_Message_Locator_XPATH}               xpath://div[@class='alert alert-danger col-md-12']
+${Valid_UserName_Input_Text}                        rahulshettyacademy
+${Valid_Password_Input_Text}                        learning
+${Wrong_UserName_Input_Text}                        WrongUserName
+${Wrong_Password_Input_Text}                        WrongPassword
+${URL_Angular_Practice_Shop}                        https://rahulshettyacademy.com/angularpractice/shop
+${URL_Login_Page_Practise}                          https://rahulshettyacademy.com/loginpagePractise/
+${Incorrect_UserName_Password_Error_Message}        Incorrect username/password.
+${Empty_UserName_Password_Error_Message}            Empty username/password.
+${Actual_Shop_Page_Header_Text}
+${Expected_Shop_Page_Header_Text}                   ProtoCommerce Home
+
 *** Test Cases ***
 1- Validate succesffull login with the valid credentials
     Open the browser with the target URL
@@ -29,47 +46,47 @@ Library     SeleniumLibrary
 Open the browser with the target URL
     Create Webdriver                        Chrome
     Maximize Browser Window
-    Go To                                   https://rahulshettyacademy.com/loginpagePractise/
+    Go To                                   ${URL_Login_Page_Practise}
 
 Fill out the login form with the valid credentials
-    Clear Element Text                      id:username
-    Clear Element Text                      id:password
-    Input Text                              id:username     rahulshettyacademy
-    Input Password                          id:password     learning
-    Click Button                            id:signInBtn
+    Clear Element Text                      ${UserName_Locator_ID}
+    Clear Element Text                      ${Password_Locator_ID}
+    Input Text                              ${UserName_Locator_ID}                                  ${Valid_UserName_Input_Text}
+    Input Password                          ${Password_Locator_ID}                                  ${Valid_Password_Input_Text}
+    Click Button                            ${SignIn_Button_Locator_ID}
 
 Fill out the login form with the wrong credentials
-    Clear Element Text                      id:username
-    Clear Element Text                      id:password
-    Input Text                              id:username     WrongUserName
-    Input Password                          id:password     WrongPassword
-    Click Button                            id:signInBtn
+    Clear Element Text                      ${UserName_Locator_ID}
+    Clear Element Text                      ${Password_Locator_ID}
+    Input Text                              ${UserName_Locator_ID}                                  ${Wrong_UserName_Input_Text}
+    Input Password                          ${Password_Locator_ID}                                  ${Wrong_Password_Input_Text}
+    Click Button                            ${SignIn_Button_Locator_ID}
 
 Fill out the login form with the empty credentials
-    Click Button                            id:signInBtn
+    Click Button                            ${SignIn_Button_Locator_ID}
 
 Validate the error message displayed
-    Wait Until Element Is Visible           xpath://div[@class='alert alert-danger col-md-12']
+    Wait Until Element Is Visible           ${SignIn_Error_Message_Locator_XPATH}
 
 Validate Incorrect error message content
-    Element Should Contain                  xpath://div[@class='alert alert-danger col-md-12']      Incorrect
-    ${IncorrectMessageText}=     Get Text   xpath://div[@class='alert alert-danger col-md-12']
-    Should Be Equal As Strings              ${IncorrectMessageText}                                 Incorrect username/password.
+    Element Should Contain                  ${SignIn_Error_Message_Locator_XPATH}                   Incorrect
+    ${IncorrectMessageText}=     Get Text   ${SignIn_Error_Message_Locator_XPATH}
+    Should Be Equal As Strings              ${IncorrectMessageText}                                 ${Incorrect_UserName_Password_Error_Message}
 
 Validate Empty error message content
-    Element Should Contain                  xpath://div[@class='alert alert-danger col-md-12']      Empty
-    ${EmptyMessageText}=     Get Text       xpath://div[@class='alert alert-danger col-md-12']
-    Should Be Equal As Strings              ${EmptyMessageText}                                     Empty username/password.
+    Element Should Contain                  ${SignIn_Error_Message_Locator_XPATH}                   Empty
+    ${EmptyMessageText}=     Get Text       ${SignIn_Error_Message_Locator_XPATH}
+    Should Be Equal As Strings              ${EmptyMessageText}                                     ${Empty_UserName_Password_Error_Message}
 
 Validate the user navigated to the shop page
-    Location Should Be                      https://rahulshettyacademy.com/angularpractice/shop
+    Location Should Be                      ${URL_Angular_Practice_Shop}
 
 Wait Until Page Contains ProtoCommerce Home
-    Wait Until Page Contains                ProtoCommerce Home
+    Wait Until Page Contains                ${Expected_Shop_Page_Header_Text}
 
 Validate shop page header
-    ${ShopPageHeaderText}=     Get Text     xpath://button[@class='navbar-toggler']//preceding-sibling::a[@class='navbar-brand']
-    Should Be Equal As Strings              ${ShopPageHeaderText}                                   ProtoCommerce Home
+    ${Actual_Shop_Page_Header_Text}=     Get Text     ${Shop_Page_Header_Locator_XPATH}
+    Should Be Equal As Strings              ${Actual_Shop_Page_Header_Text}                                   ${Expected_Shop_Page_Header_Text}
 
 Close the browser
     Close Browser

@@ -5,7 +5,7 @@ Library     SeleniumLibrary
 *** Test Cases ***
 Validate unsuccesffull login
     Open the browser with the target URL
-#    Fill out the login form with the wrong credentials
+    Fill out the login form with the wrong credentials
 #    Validate the error message displayed
 #    Validate error message content
 
@@ -16,8 +16,9 @@ Open the browser with the target URL
     Go To   https://rahulshettyacademy.com/loginpagePractise/
 
 Fill out the login form with the wrong credentials
-
-
+    input text      id:username     WrongUserName
+    input password  id:password     WrongPassword
+    click button    id:signInBtn
 
 Validate the error message displayed
 

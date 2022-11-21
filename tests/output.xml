@@ -1,31 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.1 (Python 3.11.0 on win32)" generated="20221121 22:32:47.925" rpa="false" schemaversion="3">
+<robot generator="Robot 6.0.1 (Python 3.11.0 on win32)" generated="20221121 22:52:20.014" rpa="false" schemaversion="3">
 <suite id="s1" name="Test ValidateLoginForm" source="C:\Users\_VOIS\Documents\GitHub\robot-framework-ui-api-testing\tests\Test_ValidateLoginForm.robot">
-<test id="s1-t1" name="Validate unsuccesffull login" line="7">
+<test id="s1-t1" name="Validate unsuccesffull login" line="6">
 <kw name="Open the browser with the target URL">
 <kw name="Create Webdriver" library="SeleniumLibrary">
 <arg>Chrome</arg>
 <arg>resources/chromedriver.exe</arg>
 <doc>Creates an instance of Selenium WebDriver.</doc>
-<msg timestamp="20221121 22:32:48.128" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
-<status status="PASS" starttime="20221121 22:32:48.128" endtime="20221121 22:32:49.149"/>
+<msg timestamp="20221121 22:52:20.202" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20221121 22:52:20.202" endtime="20221121 22:52:21.276"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20221121 22:32:49.149" endtime="20221121 22:32:49.281"/>
+<status status="PASS" starttime="20221121 22:52:21.276" endtime="20221121 22:52:21.389"/>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>https://rahulshettyacademy.com/loginpagePractise/</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20221121 22:32:49.281" level="INFO">Opening url 'https://rahulshettyacademy.com/loginpagePractise/'</msg>
-<status status="PASS" starttime="20221121 22:32:49.281" endtime="20221121 22:32:49.948"/>
+<msg timestamp="20221121 22:52:21.389" level="INFO">Opening url 'https://rahulshettyacademy.com/loginpagePractise/'</msg>
+<status status="PASS" starttime="20221121 22:52:21.389" endtime="20221121 22:52:22.135"/>
 </kw>
-<status status="PASS" starttime="20221121 22:32:48.128" endtime="20221121 22:32:49.948"/>
+<status status="PASS" starttime="20221121 22:52:20.202" endtime="20221121 22:52:22.135"/>
 </kw>
-<status status="PASS" starttime="20221121 22:32:48.128" endtime="20221121 22:32:49.949"/>
+<kw name="Fill out the login form with the wrong credentials">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:username</arg>
+<arg>WrongUserName</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221121 22:52:22.137" level="INFO">Typing text 'WrongUserName' into text field 'id:username'.</msg>
+<status status="PASS" starttime="20221121 22:52:22.137" endtime="20221121 22:52:22.230"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>WrongPassword</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20221121 22:52:22.230" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg timestamp="20221121 22:52:22.261" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20221121 22:52:22.320" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20221121 22:52:22.230" endtime="20221121 22:52:22.320"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:signInBtn</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221121 22:52:22.321" level="INFO">Clicking button 'id:signInBtn'.</msg>
+<status status="PASS" starttime="20221121 22:52:22.320" endtime="20221121 22:52:22.379"/>
+</kw>
+<status status="PASS" starttime="20221121 22:52:22.135" endtime="20221121 22:52:22.380"/>
+</kw>
+<status status="PASS" starttime="20221121 22:52:20.202" endtime="20221121 22:52:22.380"/>
 </test>
 <doc>Validate the login form</doc>
-<status status="PASS" starttime="20221121 22:32:47.925" endtime="20221121 22:32:49.949"/>
+<status status="PASS" starttime="20221121 22:52:20.014" endtime="20221121 22:52:22.381"/>
 </suite>
 <statistics>
 <total>

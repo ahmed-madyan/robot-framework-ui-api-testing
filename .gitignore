@@ -147,7 +147,7 @@ cython_debug/
 # Output Files
 /tests/output.xml
 *.html
-
+*.png
 /.idea
 
 # PyCharm

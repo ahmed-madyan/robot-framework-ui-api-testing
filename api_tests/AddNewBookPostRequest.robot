@@ -20,7 +20,6 @@ Create Dictionary for the Request Payload
 
 Invoke the endpoint Addbook with valid payload
     ${Response_Payload}=        POST                        ${BaseURI}${EndPoint_Addbook}   json=${Request_Payload}     expected_status=${HttpStatus.SC_OK}
-    &{Response}=         Create Dictionary           ${Response_Payload}
     Log                         ${Response}
 
 Status Should Be HttpStatus.SC_OK

@@ -28,8 +28,8 @@ ${Expected_Shop_Page_Header_Text}                   ProtoCommerce Home
     Validate the user navigated to the shop page
     Validate shop page header
 
-2- Validate unsuccesffull login with the InValid credentials
-    Fill out the login form with the InValid credentials
+2- Validate unsuccesffull login with InValid credentials
+    Fill out the login form with InValid credentials
     Validate the error message displayed
     Validate Incorrect error message content
 
@@ -46,7 +46,7 @@ Fill out the login form with the valid credentials
     Input Password                                  ${Password_Locator_ID}                                  ${Valid_Password_Input_Text}
     Click Button                                    ${SignIn_Button_Locator_ID}
 
-Fill out the login form with the InValid credentials
+Fill out the login form with InValid credentials
     Clear Element Text                              ${UserName_Locator_ID}
     Clear Element Text                              ${Password_Locator_ID}
     Input Text                                      ${UserName_Locator_ID}                                  ${InValid_UserName_Input_Text}

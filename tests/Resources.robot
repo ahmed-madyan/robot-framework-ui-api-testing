@@ -29,13 +29,13 @@ Close the browser
     Close Browser
 
 Wait for element visibility
-    [arguments]                                     ${Element_Locator}
+    [Arguments]                                     ${Element_Locator}
     Wait Until Element Is Visible                   ${Element_Locator}
 
 Wait for page contains
-    [arguments]                                     ${Expected_Text}
+    [Arguments]                                     ${Expected_Text}
     Wait Until Page Contains                        ${Expected_Text}
 
 URL should be
-    [arguments]                                     ${URL}
+    [Arguments]                                     ${URL}
     Location Should Be                              ${URL}

@@ -1,7 +1,9 @@
 *** Settings ***
 Documentation                                       Validate the login form
-Library                                             SeleniumLibrary
+...
+...                                                 Keywords are imported from the resource file
 Resource                                            Resources.robot
+Library                                             SeleniumLibrary
 Test Setup                                          Open the browser with the target URL
 Test Teardown                                       Close the browser
 

@@ -24,7 +24,7 @@ Test Teardown                                       Close the browser
 
 *** Keywords ***
 Fill out the login form
-    [arguments]                                     ${UserName}                                             ${Password}
+    [Arguments]                                     ${UserName}                                             ${Password}
     Clear Element Text                              ${UserName_Locator_ID}
     Clear Element Text                              ${Password_Locator_ID}
     Input Text                                      ${UserName_Locator_ID}                                  ${UserName}

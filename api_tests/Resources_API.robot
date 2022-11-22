@@ -14,10 +14,13 @@ ${HttpStatus.SC_BAD_REQUEST}                        400
 ${HttpStatus.SC_UNAUTHORIZED}                       401
 ${HttpStatus.SC_FORBIDDEN}                          403
 ${HttpStatus.SC_NOT_FOUND}                          404
+${book_name}                                        RobotFramework
+${book_isbn}                                        947303
+${book_aisle}                                       324534
+${book_rahulshetty}                                 AhmedMadyan
+${Book_ID}
+${Expected_Success_Message}                         The Book with the entered Isbn and Aisle already Exists!!
 ${Request_Payload}
 ${Response_Payload}
-${book_name}                                        RobotFramework
-${Book_ID}
-${Success_Message}                                  The Book with the entered Isbn and Aisle already Exists!!
 
 *** Keywords ***

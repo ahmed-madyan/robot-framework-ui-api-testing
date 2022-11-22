@@ -23,37 +23,31 @@ ${Expected_Shop_Page_Header_Text}                   ProtoCommerce Home
 
 *** Test Cases ***
 1- Validate succesffull login with the valid credentials
-    Fill out the login form with the valid credentials
+    Fill out the login form     ${Valid_UserName_Input_Text}        ${Valid_Password_Input_Text}
     Wait Until Page Contains ProtoCommerce Home
     Validate the user navigated to the shop page
     Validate shop page header
 
 2- Validate unsuccesffull login with InValid credentials
-    Fill out the login form with InValid credentials
+    Fill out the login form     ${InValid_UserName_Input_Text}      ${InValid_Password_Input_Text}
     Validate the error message displayed
     Validate Incorrect error message content
 
 3- Validate unsuccesffull login with empty credentials
-    Fill out the login form with the empty credentials
+    Fill out the login form with empty credentials
     Validate the error message displayed
     Validate Empty error message content
 
 *** Keywords ***
-Fill out the login form with the valid credentials
+Fill out the login form
+    [arguments]                                     ${UserName}                                             ${Password}
     Clear Element Text                              ${UserName_Locator_ID}
     Clear Element Text                              ${Password_Locator_ID}
-    Input Text                                      ${UserName_Locator_ID}                                  ${Valid_UserName_Input_Text}
-    Input Password                                  ${Password_Locator_ID}                                  ${Valid_Password_Input_Text}
+    Input Text                                      ${UserName_Locator_ID}                                  ${UserName}
+    Input Password                                  ${Password_Locator_ID}                                  ${Password}
     Click Button                                    ${SignIn_Button_Locator_ID}
 
-Fill out the login form with InValid credentials
-    Clear Element Text                              ${UserName_Locator_ID}
-    Clear Element Text                              ${Password_Locator_ID}
-    Input Text                                      ${UserName_Locator_ID}                                  ${InValid_UserName_Input_Text}
-    Input Password                                  ${Password_Locator_ID}                                  ${InValid_Password_Input_Text}
-    Click Button                                    ${SignIn_Button_Locator_ID}
-
-Fill out the login form with the empty credentials
+Fill out the login form with empty credentials
     Click Button                                    ${SignIn_Button_Locator_ID}
 
 Validate the error message displayed

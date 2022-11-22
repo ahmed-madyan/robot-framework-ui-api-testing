@@ -8,18 +8,18 @@ Test Teardown                                       Close the browser
 *** Test Cases ***
 1- Validate succesffull login with the valid credentials
     Fill out the login form                         ${Valid_UserName_Input_Text}        ${Valid_Password_Input_Text}
-    Wait Until Page Contains ProtoCommerce Home
-    Validate the user navigated to the shop page
+    Wait Page Contains                              ${Expected_Shop_Page_Header_Text}
+    URL Should Be                                   ${URL_Angular_Practice_Shop}
     Validate shop page header
 
 2- Validate unsuccesffull login with InValid credentials
     Fill out the login form                         ${InValid_UserName_Input_Text}      ${InValid_Password_Input_Text}
-    Validate the error message displayed
+    Wait Element Visibility                         ${SignIn_Error_Message_Locator_XPATH}
     Validate Incorrect error message content
 
 3- Validate unsuccesffull login with empty credentials
     Fill out the login form with empty credentials
-    Validate the error message displayed
+    Wait Element Visibility                         ${SignIn_Error_Message_Locator_XPATH}
     Validate Empty error message content
 
 *** Keywords ***
@@ -34,9 +34,6 @@ Fill out the login form
 Fill out the login form with empty credentials
     Click Button                                    ${SignIn_Button_Locator_ID}
 
-Validate the error message displayed
-    Wait Until Element Is Visible                   ${SignIn_Error_Message_Locator_XPATH}
-
 Validate Incorrect error message content
     Element Should Contain                          ${SignIn_Error_Message_Locator_XPATH}                   Incorrect
     ${IncorrectMessageText}=     Get Text           ${SignIn_Error_Message_Locator_XPATH}
@@ -48,12 +45,6 @@ Validate Empty error message content
     ${EmptyMessageText}=     Get Text               ${SignIn_Error_Message_Locator_XPATH}
     Should Be Equal As Strings                      ${EmptyMessageText}                                     ${Empty_UserName_Password_Error_Message}
     Element Text Should Be                          ${SignIn_Error_Message_Locator_XPATH}                   ${Empty_UserName_Password_Error_Message}
-
-Validate the user navigated to the shop page
-    Location Should Be                              ${URL_Angular_Practice_Shop}
-
-Wait Until Page Contains ProtoCommerce Home
-    Wait Until Page Contains                        ${Expected_Shop_Page_Header_Text}
 
 Validate shop page header
     ${Actual_Shop_Page_Header_Text}=    Get Text    ${Shop_Page_Header_Locator_XPATH}

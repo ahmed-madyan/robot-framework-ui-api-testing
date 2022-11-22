@@ -23,13 +23,13 @@ ${Expected_Shop_Page_Header_Text}                   ProtoCommerce Home
 
 *** Test Cases ***
 1- Validate succesffull login with the valid credentials
-    Fill out the login form     ${Valid_UserName_Input_Text}        ${Valid_Password_Input_Text}
+    Fill out the login form                         ${Valid_UserName_Input_Text}        ${Valid_Password_Input_Text}
     Wait Until Page Contains ProtoCommerce Home
     Validate the user navigated to the shop page
     Validate shop page header
 
 2- Validate unsuccesffull login with InValid credentials
-    Fill out the login form     ${InValid_UserName_Input_Text}      ${InValid_Password_Input_Text}
+    Fill out the login form                         ${InValid_UserName_Input_Text}      ${InValid_Password_Input_Text}
     Validate the error message displayed
     Validate Incorrect error message content
 

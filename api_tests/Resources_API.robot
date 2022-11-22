@@ -25,5 +25,3 @@ ${Expected_Successfully_Added_Message}              successfully added
 ${Expected_Successfully_Deleted_Message}            book is successfully deleted
 ${Request_Payload}
 ${Response_Payload}
-
-*** Keywords ***

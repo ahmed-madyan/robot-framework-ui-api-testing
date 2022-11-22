@@ -3,13 +3,13 @@ Documentation                                       Reusable keyword and variabl
 Library                                             SeleniumLibrary
 
 *** Variables ***
-${URL_Login_Page_Practise}                          https://rahulshettyacademy.com/loginpagePractise/
+${URL_Login_Page_Practice}                          https://rahulshettyacademy.com/loginpagePractise/
 
 *** Keywords ***
 Open the browser with the target URL
     Create Webdriver                                Chrome
     Maximize Browser Window
-    Go To                                           ${URL_Login_Page_Practise}
+    Go To                                           ${URL_Login_Page_Practice}
 
 Close the browser
     Close Browser

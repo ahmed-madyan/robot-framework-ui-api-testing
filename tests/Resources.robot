@@ -27,3 +27,15 @@ Open the browser with the target URL
 
 Close the browser
     Close Browser
+
+Wait Wait Element Visibility
+    [arguments]                                     ${Element_Locator}
+    Wait Until Element Is Visible                   ${Element_Locator}
+
+Wait Page Contains
+    [arguments]                                     ${Expected_Text}
+    Wait Until Page Contains                        ${Expected_Text}
+
+URL Should Be
+    [arguments]                                     ${URL}
+    Location Should Be                              ${URL}

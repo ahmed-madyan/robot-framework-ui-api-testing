@@ -3,9 +3,8 @@ Documentation                                       Validate the login form
 ...
 ...                                                 Keywords are imported from the resource file
 Resource                                            Resources.robot
-Library                                             SeleniumLibrary
-Test Setup                                          Open the browser with the target URL
-Test Teardown                                       Close the browser
+Library                                             Collections
+Library                                             RequestsLibrary
 
 *** Test Cases ***
 1- Validate succesffull login with the valid credentials

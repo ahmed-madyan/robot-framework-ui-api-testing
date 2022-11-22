@@ -145,7 +145,7 @@ dmypy.json
 cython_debug/
 
 # Output Files
-/tests/output.xml
+/api_tests/output.xml
 *.html
 *.png
 /.idea

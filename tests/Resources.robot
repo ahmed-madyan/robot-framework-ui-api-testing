@@ -28,14 +28,14 @@ Open the browser with the target URL
 Close the browser
     Close Browser
 
-Wait Wait Element Visibility
+Wait for element visibility
     [arguments]                                     ${Element_Locator}
     Wait Until Element Is Visible                   ${Element_Locator}
 
-Wait Page Contains
+Wait for page contains
     [arguments]                                     ${Expected_Text}
     Wait Until Page Contains                        ${Expected_Text}
 
-URL Should Be
+URL should be
     [arguments]                                     ${URL}
     Location Should Be                              ${URL}
